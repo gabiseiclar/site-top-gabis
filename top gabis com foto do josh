@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twenty One Pilots — Fan Site Acessível</title>
+    <style>
+      :root {
+        --scale: 1;
+        --bg: #0d0d0d;
+        --fg: #f5f5f5;
+        --accent: #ff0033;
+        /* vermelho */
+        --accent2: #b30000;
+        /* vermelho escuro */
+        --max-width: 1000px;
+      }
+
+      [data-scale] {
+        transform-origin: top left;
+        transform: scale(var(--scale));
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, Arial;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .page {
+        width: 100%;
+        max-width: var(--max-width);
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        display: flex;
+        gap: .75rem;
+        align-items: center
+      }
+
+      .brand img {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 8px
+      }
+
+      nav {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: var(--fg);
+        text-decoration: none;
+        padding: .35rem .6rem;
+        border-radius: .35rem;
+        font-weight: bold;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        background: var(--accent);
+        color: #fff;
+        outline: none;
+      }
+
+      .controls {
+        display: flex;
+        gap: .5rem;
+        align-items: center
+      }
+
+      button {
+        font-size: 1rem;
+        padding: .4rem .6rem;
+        border-radius: .35rem;
+        border: 1px solid #444;
+        background: #1a1a1a;
+        color: var(--fg);
+      }
+
+      button:focus {
+        outline: 3px solid var(--accent)
+      }
+
+      h1 {
+        color: var(--accent)
+      }
+
+      h2 {
+        color: var(--accent2)
+      }
+
+      h3 {
+        color: var(--accent)
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem
+      }
+
+      .card {
+        border: 1px solid #333;
+        padding: .75rem;
+        border-radius: .5rem;
+        background: #111;
+      }
+
+      img.responsive {
+        width: 100%;
+        height: auto;
+        border-radius: .4rem
+      }
+
+      figcaption {
+        font-size: .9rem;
+        color: #ccc;
+        margin-top: .3rem
+      }
+
+      footer {
+        border-top: 1px solid #333;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        font-size: .9rem;
+        color: #bbb;
+        text-align: center
+      }
+
+      .high-contrast {
+        --bg: #fff;
+        --fg: #000;
+        --accent: #000;
+        --accent2: #000
+      }
+    </style>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="page" id="page-wrapper" data-scale="">
+      <header>
+        <div class="brand">
+          <img src="https://i.scdn.co/image/ab6761610000517461a7ea26d33ded218cd1e59d" alt="Twenty One Pilots em show">
+          <div>
+            <strong>TWENTY ONE PILOTS</strong>
+            <div style="font-size:.9rem;color:#ccc">Fan site acessível</div>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#sobre">Sobre</a>
+          <a href="#membros">Membros</a>
+          <a href="#discografia">Discografia</a>
+          <a href="#lore">Lore</a>
+          <a href="#galeria">Galeria</a>
+        </nav>
+
+        <div class="controls">
+          <button id="zoom-out">A-</button>
+          <button id="zoom-reset">100%</button>
+          <button id="zoom-in">A+</button>
+          <button id="contrast" aria-pressed="false">Contraste</button>
+        </div>
+      </header>
+
+      <main>
+        <section id="hero">
+          <h1>Twenty One Pilots</h1>
+          <p class="card">Dupla de Columbus, Ohio, que mistura rap, rock alternativo e pop, explorando temas de ansiedade, identidade e esperança. Suas músicas e visuais criam um universo único.</p>
+        </section>
+
+        <section id="membros">
+          <h2>Membros</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Tyler Joseph</h3>
+              <figure>
+                <img class="responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3aip28UPsTofu9FRd7jFlclgM5SqV8NLDTA&amp;s" alt="Tyler Joseph cantando em 2016">
+                <figcaption>Tyler Robert Joseph é um cantor, compositor, multi-instrumentista, produtor de discos e rapper norte-americano. Tyler é o vocalista do duo musical Twenty One Pilots.</figcaption>
+              </figure>
+            </article>
+            <article class="card">
+              <h3>Josh Dun</h3>
+              <figure>
+                <img class="responsive" src="https://static.wikia.nocookie.net/twenty-one-pilots/images/c/c9/Josh_2024.jpg/revision/latest?cb=20240906161208" alt="Josh Dun tocando bateria em 2016">
+                <figcaption>Joshua William "Josh" Dun é um músico americano. Ele é o baterista e percussionista do duo musical Twenty One Pilots.</figcaption>
+              </figure>
+            </article>
+          </div>
+        </section>
+
+        <section id="discografia">
+          <h2>Discografia</h2>
+          <div class="grid">
+            <div class="card"><strong>Vessel (2013)</strong>
+              <p>Com faixas como <em>Car Radio</em>, definiu a identidade da banda.</p>
+            </div>
+            <div class="card"><strong>Blurryface (2015)</strong>
+              <p>Álbum que os lançou mundialmente com <em>Stressed Out</em> e <em>Ride</em>.</p>
+            </div>
+            <div class="card"><strong>Trench (2018)</strong>
+              <p>Universo conceitual de Dema, com <em>Jumpsuit</em> e <em>Chlorine</em>.</p>
+            </div>
+            <div class="card"><strong>Scaled and Icy (2021)</strong>
+              <p>Mais colorido e otimista, lançado na pandemia.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="lore">
+          <h2>Lore</h2>
+          <p class="card">A "lore" ou história por trás do Twenty One Pilots, centrada no protagonista Clancy, é uma saga musical sobre saúde mental, insegurança e a luta pela liberdade contra uma entidade sombria chamada Dema, controlada por Bispos. Clancy, um alter ego de Tyler Joseph, tenta escapar desta cidade opressora e se une a um grupo de rebeldes chamados Banditos para lutar contra a influência destrutiva de Dema. A narrativa explora o simbolismo da ansiedade e da depressão, culminando no álbum Clancy, que representa uma conclusão da história, mas também a aceitação de Tyler sobre as batalhas que canaliza através da narrativa. .</p>
+        </section>
+
+        <section id="galeria">
+          <h2>Galeria</h2>
+          <div class="grid">
+            <figure class="card">
+              <img class="responsive" src="https://imgix.bustle.com/uploads/getty/2021/5/18/57760852-f3c4-4234-8f01-19566877b2e8-getty-634981492.jpg?w=1200&amp;h=1200&amp;fit=crop&amp;crop=faces&amp;fm=jpg" alt="Twenty One Pilots no American Music Awards 2016">
+              <figcaption>Tyler Joseph e Josh Dun, do twenty one pilots, tiraram a calça no Grammy de 2017 para cumprir uma promessa que fizeram anos antes.
+                A promessa foi feita quando eles ainda não eram famosos e assistiam à cerimônia na casa alugada de Tyler, em Columbus, Ohio. Naquela ocasião, eles perceberam que todos na sala estavam de cueca. Josh virou-se para Tyler e disse: "Se nós um dia formos ao Grammy e ganharmos um Grammy, nós deveríamos recebê-lo exatamente assim.</figcaption>
+            </figure>
+            <figure class="card">
+              <img class="responsive" src="https://www.twentyonepilots.com/sites/g/files/g2000020241/files/2025-06/desktopHeaderBg_0.jpg" alt="Twenty One Pilots em show ao vivo">
+              <figcaption>Em 13 de setembro de 2025, a dupla lançou o álbum Breach, que estreou em 1º lugar na Billboard 200, a mais importante parada dos EUA que classifica álbuns e EPs. Com esse lançamento, o Twenty One Pilots registrou a maior estreia de um álbum de rock em seis anos, reafirmando seu impacto no cenário musical.
+
+                Breach é considerado o capítulo final da narrativa construída ao longo dos álbuns anteriores — conectando simbolismos de Blurryface, Trench e Scaled and Icy, ele encerra o arco conceitual de lutas internas, resiliência e identidade que vem sendo explorado pela banda desde seus primeiros discos.</figcaption>
+            </figure>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Fan site de demonstração • Imagens: google, instagram</p>
+      </footer>
+    </div>
+
+    <script>
+      (function() {
+        const wrapper = document.getElementById('page-wrapper');
+        const btnIn = document.getElementById('zoom-in');
+        const btnOut = document.getElementById('zoom-out');
+        const btnReset = document.getElementById('zoom-reset');
+        const btnContrast = document.getElementById('contrast');
+        let scale = 1;
+
+        function setScale(s) {
+          scale = Math.min(1.6, Math.max(0.7, Math.round(s * 100) / 100));
+          wrapper.style.setProperty('--scale', scale);
+          btnReset.textContent = Math.round(scale * 100) + '%';
+        }
+        btnIn.onclick = () => setScale(scale + 0.1);
+        btnOut.onclick = () => setScale(scale - 0.1);
+        btnReset.onclick = () => setScale(1);
+        btnContrast.onclick = () => {
+          const isOn = document.body.classList.toggle('high-contrast');
+          btnContrast.setAttribute('aria-pressed', isOn);
+        }
+      })();
+    </script>
+
+
+
+  </body>
+
+</html>
